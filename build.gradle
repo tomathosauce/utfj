@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    extraLibs 
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    implementation 'net.java.dev.jna:jna-platform:5.6.0'
+}
+
+jar {
+    archiveBaseName = 'utfj'
+    archiveVersion =  '0.1.0'
+
+    /*manifest {
+        attributes 'Main-Class': 'utfj.U'
+    }*/
+
+    //Supuestamente esto copia todas las librerias utilizadas al jar para que funcione
+    //from configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    
+}
+
+//println projectDir
