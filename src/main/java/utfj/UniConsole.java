@@ -1,7 +1,5 @@
 package utfj;
 
-import java.util.Scanner;
-
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import com.sun.jna.ptr.IntByReference;
